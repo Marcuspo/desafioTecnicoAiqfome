@@ -3,10 +3,11 @@ import React from 'react';
 import StackNavigation from './routes/StackNavigation';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {StatusBar} from 'react-native';
+import Bootsplash from 'react-native-bootsplash';
 
 function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer onReady={() => Bootsplash.hide({fade: true})}>
       <SafeAreaProvider>
         <StatusBar
           barStyle="dark-content"

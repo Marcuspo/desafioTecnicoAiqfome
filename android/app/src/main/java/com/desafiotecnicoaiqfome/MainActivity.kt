@@ -1,6 +1,7 @@
 package com.desafiotecnicoaiqfome
 
 import android.os.Bundle;
+import com.zoontek.rnbootsplash.RNBootSplash
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
@@ -14,7 +15,8 @@ class MainActivity : ReactActivity() {
    * rendering of the component.
    */
   override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(null)
+    RNBootSplash.init(this, R.style.BootTheme) // ⬅️ initialize the splash screen
+    super.onCreate(savedInstanceState)
   }
 
   override fun getMainComponentName(): String = "desafioTecnicoAiqfome"
