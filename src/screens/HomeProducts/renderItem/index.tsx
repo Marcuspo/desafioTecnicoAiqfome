@@ -21,13 +21,21 @@ function RenderItem({item, onToggleFavorite}: RenderItemProps) {
   };
 
   useEffect(() => {
-    const checkIfFavorite = async () => {
-      const storedFavorites = await AsyncStorage.getItem('favorites');
-      const favorites = storedFavorites ? JSON.parse(storedFavorites) : [];
-      const isFav = favorites.some((fav: any) => fav.id === item.id);
-      setIsFavorite(isFav);
-    };
+    const unsubscribe = navigation.addListener('focus', () => {
+      checkIfFavorite();
+    });
 
+    return unsubscribe;
+  }, [item]);
+
+  const checkIfFavorite = async () => {
+    const storedFavorites = await AsyncStorage.getItem('favorites');
+    const favorites = storedFavorites ? JSON.parse(storedFavorites) : [];
+    const isFav = favorites.some((fav: any) => fav.id === item.id);
+    setIsFavorite(isFav);
+  };
+
+  useEffect(() => {
     checkIfFavorite();
   }, [item]);
 

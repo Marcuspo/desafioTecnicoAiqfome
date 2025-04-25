@@ -1,7 +1,5 @@
 /* eslint-disable react/no-unstable-nested-components */
-import {useNavigation} from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
-import {NavigationProps} from '../../routes/types';
 import * as S from './styles';
 import {useNetInfo} from '@react-native-community/netinfo';
 import FastImage from 'react-native-fast-image';
@@ -9,6 +7,7 @@ import Offline from '../Offline';
 import {ActivityIndicator, FlatList} from 'react-native';
 import axios from 'axios';
 import RenderItem from './renderItem';
+import Bootsplash from 'react-native-bootsplash';
 
 export interface Product {
   id: number;
@@ -27,7 +26,6 @@ function Home() {
   const {isConnected} = useNetInfo();
   const [data, setData] = useState<Product[]>([]);
   const [loading, setLoading] = useState(false);
-  const navigation = useNavigation<NavigationProps>();
 
   const fetchData = async () => {
     setLoading(true);
@@ -38,16 +36,9 @@ function Home() {
       console.error(error);
     } finally {
       setLoading(false);
+      Bootsplash.hide({fade: true});
     }
   };
-
-  useEffect(() => {
-    const unsubscribe = navigation.addListener('focus', () => {
-      fetchData();
-    });
-
-    return unsubscribe;
-  }, [navigation]);
 
   useEffect(() => {
     fetchData();
@@ -66,7 +57,7 @@ function Home() {
               ListHeaderComponent={() => (
                 <>
                   <S.ImageLogo
-                    source={require('../../images/logo.png')}
+                    source={require('../../assets/images/logo.png')}
                     resizeMode={FastImage.resizeMode.contain}
                   />
                   <S.HeaderTitle>Lista de itens</S.HeaderTitle>
