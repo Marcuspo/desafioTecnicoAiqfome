@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://images.seeklogo.com/logo-png/38/1/aiqfome-logo-png_seeklogo-381190.png" alt="ICON AIQFOME" width="300px" height="100px">
+  <img src="https://yt3.googleusercontent.com/IYyFqoDVnDdZ9uGG8yyTYzjcTE3D38hsUGuTNKWRYuyenCx89N4wX6mfeH0ZRYfMgxmrM-uihQ=s900-c-k-c0x00ffffff-no-rj" alt="ICON AIQFOME" width="300px" height="100px">
 </p>
 
 # Aiqfome desafio
@@ -16,10 +16,10 @@ using the framework
 ## Imagens
 
 <p>
-  <img src="https://i.imgur.com/AQsXCoq.png" alt="Splashscreen" width="300" height="500">
-  <img src="https://i.imgur.com/DFON1wH.png" alt="Tela principal" width="300" height="500">
-  <img src="https://i.imgur.com/2rV0799.png" alt="Tela de favoritos" width="300" height="500">
-  <img src="https://i.imgur.com/7M8iXDk.png" alt="Tela de detalhes" width="300" height="500">
+  <img src="https://i.imgur.com/AQsXCoq.png" alt="Splashscreen" width="200" height="500">
+  <img src="https://i.imgur.com/DFON1wH.png" alt="Tela principal" width="200" height="500">
+  <img src="https://i.imgur.com/2rV0799.png" alt="Tela de favoritos" width="200" height="500">
+  <img src="https://i.imgur.com/7M8iXDk.png" alt="Tela de detalhes" width="200" height="500">
 </p>
 
 ## 🚀 Technologies
