@@ -2,10 +2,11 @@ import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import Details from '../screens/Details';
 import TabNavigation from './TabNavigation';
+import {Product} from '../screens/HomeProducts';
 
 type StackNavigationProps = {
   Home: undefined;
-  Details: undefined;
+  Details: {item: Product};
 };
 
 const Stack = createStackNavigator<StackNavigationProps>();
