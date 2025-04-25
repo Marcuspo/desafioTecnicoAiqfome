@@ -31,7 +31,7 @@ function RenderItem({item, onToggleFavorite}: RenderItemProps) {
   const checkIfFavorite = async () => {
     const storedFavorites = await AsyncStorage.getItem('favorites');
     const favorites = storedFavorites ? JSON.parse(storedFavorites) : [];
-    const isFav = favorites.some((fav: any) => fav.id === item.id);
+    const isFav = favorites.some((fav: Product) => fav.id === item.id);
     setIsFavorite(isFav);
   };
 
@@ -43,7 +43,7 @@ function RenderItem({item, onToggleFavorite}: RenderItemProps) {
     try {
       const storedFavorites = await AsyncStorage.getItem('favorites');
 
-      let favorites: any[] = [];
+      let favorites: Product[] = [];
 
       try {
         favorites = storedFavorites ? JSON.parse(storedFavorites) : [];
@@ -75,11 +75,6 @@ function RenderItem({item, onToggleFavorite}: RenderItemProps) {
   const handleToggleFavorite = async () => {
     const wasAdded = await toggleFavorite(item);
     setIsFavorite(wasAdded);
-    if (wasAdded) {
-      console.log('Item adicionado aos favoritos');
-    } else {
-      console.log('Item removido dos favoritos');
-    }
     if (onToggleFavorite) {
       onToggleFavorite();
     }

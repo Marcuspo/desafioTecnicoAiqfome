@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {TouchableOpacity, View} from 'react-native';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {RootStackParamList} from '../../routes/types';
 import FastImage from 'react-native-fast-image';

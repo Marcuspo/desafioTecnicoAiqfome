@@ -1,22 +1,10 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useNavigation} from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
-import {ActivityIndicator, FlatList, Text, View} from 'react-native';
+import {ActivityIndicator, FlatList} from 'react-native';
 import RenderItem from '../HomeProducts/renderItem';
 import * as S from './styles';
-
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
-}
+import {Product} from '../HomeProducts';
 
 function Favorites() {
   const navigation = useNavigation();
