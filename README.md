@@ -23,8 +23,10 @@ Olá! Me chamo **Marcus Pontes** e este é o projeto desenvolvido como parte de 
   <img src="https://i.imgur.com/2rV0799.png" alt="Tela de favoritos" width="200" height="500">
   <img src="https://i.imgur.com/7M8iXDk.png" alt="Tela de detalhes" width="200" height="500">
 </p>
-
+    
 ---
+
+  
 
 ## 🧠 Decisões Técnicas
 
